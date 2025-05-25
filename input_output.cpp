@@ -11,4 +11,6 @@ int main()
     char c;
     cin >> c;
     cout << "Character is: " << c;
+
+    return 0;
 }

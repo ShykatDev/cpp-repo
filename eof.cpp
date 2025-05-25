@@ -10,4 +10,6 @@ int main()
     while(cin >> x){
         cout << "The given input is: "<< x << endl;
     }
+
+    return 0;
 }
