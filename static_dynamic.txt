@@ -1,0 +1,15 @@
+1. Stack
+----------
+    - Static memory
+    - Compiler time memory
+    - Limited memory
+    - Can't reallocate after first initialization
+    - Auto memory cleanup
+
+2. Heap
+--------
+    - Dynamic memory
+    - Runtime memory
+    - More memory than stack
+    - Can reallocate after first initialization
+    - User instructed memory cleanup
