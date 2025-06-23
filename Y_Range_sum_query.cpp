@@ -5,7 +5,7 @@ int main()
 {
     int n, q;
     cin >> n >> q;
-    int arr[n + 1];
+    vector<int> arr(n + 1);
 
     for (int i = 1; i <= n; i++)
     {
@@ -13,9 +13,9 @@ int main()
     }
 
     // Make a new prefix-sum array
-    int pre[n + 1];
-    pre[1] = arr[1];
-    for (int i = 2; i <= n; i++)
+    vector<long long> pre(n + 1);
+    pre[0] = arr[0];
+    for (int i = 1; i <= n; i++)
     {
         pre[i] = pre[i - 1] + arr[i];
     }
