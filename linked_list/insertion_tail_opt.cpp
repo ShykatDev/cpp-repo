@@ -20,6 +20,7 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
     if (head == NULL) // Corner case for empty linked list
     {
         head = newNode;
+        tail = newNode;
         return;
     }
 
