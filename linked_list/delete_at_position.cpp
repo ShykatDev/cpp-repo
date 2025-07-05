@@ -31,9 +31,20 @@ void Insert(Node *&head, Node *&tail, int val)
 
 void Delete(Node *&head)
 {
-    Node *delnode = head;
-    head = head->next;
-    delete (delnode);
+    int pos;
+    cin >> pos;
+
+    Node *temp = head;
+
+    for (int i = 1; i < pos; i++)
+    {
+        temp = temp->next;
+    }
+
+    Node *delNode = temp->next;
+    temp->next = temp->next->next;
+
+    delete delNode;
 }
 
 void Print(Node *&head)
@@ -42,9 +53,11 @@ void Print(Node *&head)
 
     while (temp != NULL)
     {
-        cout << temp->val << " | ";
+        cout << temp->val << " ";
         temp = temp->next;
     }
+
+    cout << endl;
 }
 
 int main()
