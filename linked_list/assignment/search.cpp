@@ -42,51 +42,58 @@ void Print(Node *head)
     cout << endl;
 }
 
-int GetMinMaxDiff(Node *head)
+int Search(Node *&head, int x)
 {
-    int min = head->val, max = head->val;
     Node *temp = head;
+    int index = 0;
+    bool isFound = false;
 
     while (temp != NULL)
     {
-        if (min > temp->val)
+        if (temp->val == x)
         {
-            min = temp->val;
+            isFound = true;
+            break;
         }
-
-        if (max < temp->val)
+        else
         {
-            max = temp->val;
+            index++;
         }
-
         temp = temp->next;
     }
 
-    int diff = max - min;
-
-    return diff;
+    return isFound ? index : -1;
 }
 
 int main()
 {
-    Node *head = NULL;
-    Node *tail = NULL;
-    int val;
+    int t;
+    cin >> t;
 
-    while (true)
+    while (t--)
     {
-        cin >> val;
+        Node *head = NULL;
+        Node *tail = NULL;
 
-        if (val == -1)
+        while (true)
         {
-            break;
+            int val;
+            cin >> val;
+
+            if (val == -1)
+            {
+                break;
+            }
+
+            Insert(head, tail, val);
         }
 
-        Insert(head, tail, val);
-    }
+        int x;
+        cin >> x;
 
-    int res = GetMinMaxDiff(head);
-    cout << res;
+        int idx = Search(head, x);
+        cout << idx << endl;
+    }
 
     return 0;
 }
