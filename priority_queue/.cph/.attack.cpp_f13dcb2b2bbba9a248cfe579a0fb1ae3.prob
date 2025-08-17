@@ -1,0 +1,1 @@
+{"name":"Local: attack","url":"e:\\Phitron\\c plus\\priority_queue\\attack.cpp","tests":[{"id":1755274142703,"input":"3 3\n1 2 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Phitron\\c plus\\priority_queue\\attack.cpp","group":"local","local":true}
