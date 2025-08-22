@@ -45,6 +45,8 @@ int main()
         arr[b].push_back(a);
     }
 
+    memset(v, false, sizeof(v));
+
     BFS(0);
 
     return 0;
